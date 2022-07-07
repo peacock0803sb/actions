@@ -1,0 +1,14 @@
+name: Sandbox action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sandbox:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          apt-get install jq
+          curl -s 'https://api.github.com/repos/python/cpython/git/refs/tags' | jq ".[].ref"
