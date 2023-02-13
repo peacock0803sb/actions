@@ -15,6 +15,6 @@ jobs:
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           branch: tmp/${{ github.sha }}
-          delete_branch: true
+          delete-branch: true
           title: tmp ${{ github.sha }}
           body: ""
