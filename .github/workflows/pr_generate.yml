@@ -15,7 +15,7 @@ jobs:
           echo "$(date -j -v-00H +'%Y-%m-%d:%H:%M:%S'): ${{ github.sha }}" >> README.md
       - uses: peter-evans/create-pull-request@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GHA_PAT }}
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           branch: tmp/${{ github.sha }}
